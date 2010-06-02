@@ -54,7 +54,7 @@ class LKC_PerGroupShipping_Model_Observer
             {
                 $qty *= $item->getParentItem()->getQty();
             }
-            $qty -= $item->getFreeQuantity();
+            $qty -= $item->getFreeShipping();
             $qty = max($qty, 0);
 
             if($request->getFreeShipping() || $qty === 0)
