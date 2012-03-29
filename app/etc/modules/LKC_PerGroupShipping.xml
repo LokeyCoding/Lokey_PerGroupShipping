@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+	<LKC_PerGroupShipping>
+	    <active>true</active>
+	    <codePool>local</codePool>
+	    <depends>
+		<Mage_Core />
+		<Mage_Eav />
+		<Mage_Catalog />
+		<Mage_Adminhtml />
+		<LKC_ShippingAdjustmentsCore />
+	    </depends>
+	</LKC_PerGroupShipping>
+    </modules>
+</config>
