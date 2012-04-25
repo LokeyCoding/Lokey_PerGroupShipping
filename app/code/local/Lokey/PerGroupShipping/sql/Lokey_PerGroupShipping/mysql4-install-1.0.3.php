@@ -27,7 +27,7 @@ $this->run("
 
 $this->addAttribute(
     'catalog_product',
-    'lokey_shippingadjustments_group',
+    'lokey_sa_group',
     array(
          'group'    => 'Shipping',
          'type'     => 'int',

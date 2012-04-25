@@ -16,6 +16,6 @@ class Lokey_PerGroupShipping_Helper_Data extends Mage_Core_Helper_Abstract
 
     public function getAdjustmentGroupByProduct(Mage_Catalog_Model_Product $product)
     {
-        return Mage::getModel('Lokey_PerGroupShipping/Group')->load($product->getData('lokey_shippingadjustments_group'));
+        return Mage::getModel('Lokey_PerGroupShipping/Group')->load($product->getData('lokey_sa_group'));
     }
 }

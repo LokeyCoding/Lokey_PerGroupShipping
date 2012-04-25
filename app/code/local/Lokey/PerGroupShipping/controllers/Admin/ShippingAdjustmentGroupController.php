@@ -11,7 +11,7 @@
  * @author     Lee Saferite <lee.saferite@lokeycoding.com>
  */
 
-class Lokey_PerGroupShipping_Admin_ShippingAdjustmentGroup extends Mage_Adminhtml_Controller_Action
+class Lokey_PerGroupShipping_Admin_ShippingAdjustmentGroupController extends Mage_Adminhtml_Controller_Action
 {
 
     public function indexAction()

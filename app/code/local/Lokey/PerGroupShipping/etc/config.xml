@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Lokey_PerGroupShipping>
-            <version>5.0.0</version>
+            <version>5.0.1</version>
         </Lokey_PerGroupShipping>
     </modules>
     <admin>
@@ -10,7 +10,7 @@
             <adminhtml>
                 <args>
                     <modules>
-                        <Lokey_PerGroupShipping_Admin before="Mage_Adminhtml">Lokey_PerGroupShipping_Admin</Lokey_PerGroupShipping_Admin>
+                        <Lokey_PerGroupShipping before="Mage_Adminhtml">Lokey_PerGroupShipping_Admin</Lokey_PerGroupShipping>
                     </modules>
                 </args>
             </adminhtml>
@@ -31,7 +31,7 @@
                 <children>
                     <lokey_sa_pg translate="title" module="Lokey_PerGroupShipping">
                         <title>Shipping Adjustment Groups</title>
-                        <action>admin/shippingAdjustmentGroup</action>
+                        <action>adminhtml/shippingAdjustmentGroup</action>
                         <sort_order>600</sort_order>
                     </lokey_sa_pg>
                 </children>
