@@ -9,7 +9,7 @@
                 <Mage_Eav/>
                 <Mage_Catalog/>
                 <Mage_Adminhtml/>
-                <Lokey_ShippingAdjustmentsCore/>
+                <Lokey_ShippingAdjustments/>
             </depends>
         </Lokey_PerGroupShipping>
     </modules>
