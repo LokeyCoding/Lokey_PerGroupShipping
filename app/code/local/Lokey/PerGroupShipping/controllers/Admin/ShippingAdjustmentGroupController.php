@@ -1,13 +1,14 @@
 <?php
 /**
  * NOTICE OF LICENSE
- * This source file is subject to the Lokey Coding, LLC - SOFTWARE LICENSE (v1.0)
- * that is bundled with this package in the file Lokey_LICENSE.txt.
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file OSL_LICENSE.txt
  *
  * @category   Mage
  * @package    Lokey_PerGroupShipping
- * @copyright  Copyright (c) 2009 Lokey Coding, LLC <ip@lokeycoding.com>
- * @license    Lokey Coding, LLC - SOFTWARE LICENSE (v1.0)
+ * @copyright  Copyright (c) 2009-2013 Lokey Coding, LLC <ip@lokeycoding.com>
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  * @author     Lee Saferite <lee.saferite@lokeycoding.com>
  */
 
@@ -18,9 +19,7 @@ class Lokey_PerGroupShipping_Admin_ShippingAdjustmentGroupController extends Mag
     {
         if ($this->getRequest()->getQuery('ajax')) {
             $this->_forward('grid');
-        }
-        else
-        {
+        } else {
             $this->loadLayout();
             $this->_setActiveMenu('sales/shipping/lokey_sa_group');
             $this->_addContent($this->getLayout()->createBlock('Lokey_PerGroupShipping/Admin_Group', 'group'));
@@ -50,9 +49,7 @@ class Lokey_PerGroupShipping_Admin_ShippingAdjustmentGroupController extends Mag
                 Mage::helper('Lokey_PerGroupShipping/Data')->__('New Group'),
                 Mage::helper('Lokey_PerGroupShipping/Data')->__('Create Shipping Adjustment Group')
             );
-        }
-        else
-        {
+        } else {
             $this->_addBreadcrumb(
                 Mage::helper('Lokey_PerGroupShipping/Data')->__('Edit Group'),
                 Mage::helper('Lokey_PerGroupShipping/Data')->__('Edit Shipping Adjustment Group')
@@ -74,13 +71,11 @@ class Lokey_PerGroupShipping_Admin_ShippingAdjustmentGroupController extends Mag
 
             $isNew = !$group->getId();
 
-            try
-            {
+            try {
                 $group->save();
                 Mage::getSingleton('adminhtml/session')->addSuccess(Mage::helper('Lokey_PerGroupShipping/Data')->__('Adjustment Group was successfully saved'));
             }
-            catch (Exception $e)
-            {
+            catch (Exception $e) {
                 Mage::getSingleton('adminhtml/session')->addError($e->getMessage());
                 Mage::getSingleton('adminhtml/session')->setGroupData($data);
                 $this->getResponse()->setRedirect($this->getUrl('*/*/*', array('_current' => true)));
@@ -95,13 +90,11 @@ class Lokey_PerGroupShipping_Admin_ShippingAdjustmentGroupController extends Mag
     {
         $group = $this->_initGroup();
         if ($group->getId()) {
-            try
-            {
+            try {
                 $group->delete();
                 Mage::getSingleton('adminhtml/session')->addSuccess(Mage::helper('Lokey_PerGroupShipping/Data')->__('Adjustment Group was deleted'));
             }
-            catch (Exception $e)
-            {
+            catch (Exception $e) {
                 Mage::getSingleton('adminhtml/session')->addError($e->getMessage());
             }
         }
@@ -110,7 +103,7 @@ class Lokey_PerGroupShipping_Admin_ShippingAdjustmentGroupController extends Mag
 
     protected function _initGroup($idFieldName = 'id')
     {
-        $id    = (int)$this->getRequest()->getParam($idFieldName);
+        $id = (int)$this->getRequest()->getParam($idFieldName);
         $group = Mage::getModel('Lokey_PerGroupShipping/Group');
 
         if ($id) {

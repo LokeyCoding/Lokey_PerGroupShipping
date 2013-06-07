@@ -5,28 +5,28 @@
         <?php echo $this->getResetButtonHtml(); ?>
         <?php echo $this->getSaveButtonHtml(); ?>
         <?php if ($this->getEditMode()): ?>
-        <?php echo $this->getDeleteButtonHtml(); ?>
+            <?php echo $this->getDeleteButtonHtml(); ?>
         <?php endif ?>
     </p>
 </div>
 <form action="<?php echo $this->getSaveUrl() ?>" method="post" id="pergroup_group_edit_form">
-    <?php echo $this->getBlockHtml('formkey')?>
+    <?php echo $this->getBlockHtml('formkey') ?>
     <?php echo $this->getForm() ?>
 </form>
 <script type="text/javascript">
     //<![CDATA[
     var groupForm = new varienForm('pergroup_group_edit_form');
     var groupControl = {
-        init:function () {
+        init: function () {
             if ($('convert_button_back')) {
                 $('convert_button_back').hide();
             }
         },
-        save:function () {
+        save: function () {
             groupForm.submit();
             return false;
         },
-        deleteTemplate:function () {
+        deleteTemplate: function () {
             if (window.confirm("<?php echo Mage::helper('Lokey_PerGroupShipping/Data')->__('Are you sure that you want to delete this group?') ?>")) {
                 window.location.href = '<?php echo $this->getDeleteUrl() ?>';
             }

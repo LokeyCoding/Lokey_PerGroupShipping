@@ -1,13 +1,14 @@
 <?php
 /**
  * NOTICE OF LICENSE
- * This source file is subject to the Lokey Coding, LLC - SOFTWARE LICENSE (v1.0)
- * that is bundled with this package in the file Lokey_LICENSE.txt.
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file OSL_LICENSE.txt
  *
  * @category   Mage
  * @package    Lokey_PerGroupShipping
- * @copyright  Copyright (c) 2009 Lokey Coding, LLC <ip@lokeycoding.com>
- * @license    Lokey Coding, LLC - SOFTWARE LICENSE (v1.0)
+ * @copyright  Copyright (c) 2009-2013 Lokey Coding, LLC <ip@lokeycoding.com>
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  * @author     Lee Saferite <lee.saferite@lokeycoding.com>
  */
 
@@ -49,8 +50,7 @@ class Lokey_PerGroupShipping_Block_Admin_Group_Grid extends Mage_Adminhtml_Block
         );
 
         $options = array();
-        foreach (Mage::getSingleton('Lokey_PerGroupShipping/System_Config_Source_AdjustmentType')->toOptionArray() as $entry)
-        {
+        foreach (Mage::getSingleton('Lokey_PerGroupShipping/System_Config_Source_AdjustmentType')->toOptionArray() as $entry) {
             $options[$entry['value']] = $entry['label'];
         }
         $this->addColumn(
@@ -64,8 +64,7 @@ class Lokey_PerGroupShipping_Block_Admin_Group_Grid extends Mage_Adminhtml_Block
         );
 
         $options = array();
-        foreach (Mage::getSingleton('adminhtml/system_config_source_yesno')->toOptionArray() as $entry)
-        {
+        foreach (Mage::getSingleton('adminhtml/system_config_source_yesno')->toOptionArray() as $entry) {
             $options[$entry['value']] = $entry['label'];
         }
         $this->addColumn(
