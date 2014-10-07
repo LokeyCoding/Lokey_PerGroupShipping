@@ -1,17 +1,15 @@
 {
     "name": "LokeyCoding/Lokey_PerGroupShipping",
-    "description": "Shipping Per Group",
+    "description": "Magento Per-Group Shipping Adjustments Module",
     "authors": [
         {
             "name": "Lee Saferite",
-            "email": "lee.saferite@aoe.com"
+            "email": "lee@saferite.com"
         }
     ],
     "type": "magento-module",
     "require": {
-        "magento-hackathon/magento-composer-installer": "*"
-    },
-    "require-dev": {
-        "ecomdev/ecomdev_phpunit": "*"
+        "magento-hackathon/magento-composer-installer": "*",
+        "LokeyCoding/Lokey_ShippingAdjustments": "*" 
     }
 }
