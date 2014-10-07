@@ -1,2 +1,2 @@
-app/etc/modules/Lokey_PerItemShipping.xml
-app/code/local/Lokey/PerItemShipping
+app/etc/modules/Lokey_PerGroupShipping.xml
+app/code/local/Lokey/PerGroupShipping
